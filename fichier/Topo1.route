@@ -1,0 +1,94 @@
+Unicast lids [0x0-0xe] of switch DR path slid 0; dlid 0; 0,1,4,5 guid 0x0000000000200002 (Switch(1 1 0)):
+  Lid  Out   Destination
+       Port     Info 
+0x0001 004 : (Channel Adapter portguid 0x0000000000100001: 'HCA(000)')
+0x0002 006 : (Switch portguid 0x0000000000200000: 'Switch(1 0 0)')
+0x0003 006 : (Switch portguid 0x0000000000200001: 'Switch(1 0 1)')
+0x0004 005 : (Channel Adapter portguid 0x0000000000100003: 'HCA(001)')
+0x0005 000 : (Switch portguid 0x0000000000200002: 'Switch(1 1 0)')
+0x0006 004 : (Switch portguid 0x0000000000200003: 'Switch(0 0 0)')
+0x0007 006 : (Switch portguid 0x0000000000200004: 'Switch(0 0 1)')
+0x0008 006 : (Channel Adapter portguid 0x0000000000100005: 'HCA(010)')
+0x0009 007 : (Channel Adapter portguid 0x0000000000100007: 'HCA(011)')
+0x000a 004 : (Channel Adapter portguid 0x0000000000100009: 'HCA(100)')
+0x000b 005 : (Channel Adapter portguid 0x000000000010000b: 'HCA(101)')
+0x000c 001 : (Channel Adapter portguid 0x000000000010000d: 'HCA(110)')
+0x000d 002 : (Channel Adapter portguid 0x000000000010000f: 'HCA(111)')
+0x000e 003 : (Channel Adapter portguid 0x0000000000100011: 'HCA(200)')
+14 valid lids dumped 
+Unicast lids [0x0-0xe] of switch DR path slid 0; dlid 0; 0,1,4,3 guid 0x0000000000200001 (Switch(1 0 1)):
+  Lid  Out   Destination
+       Port     Info 
+0x0001 004 : (Channel Adapter portguid 0x0000000000100001: 'HCA(000)')
+0x0002 006 : (Switch portguid 0x0000000000200000: 'Switch(1 0 0)')
+0x0003 000 : (Switch portguid 0x0000000000200001: 'Switch(1 0 1)')
+0x0004 005 : (Channel Adapter portguid 0x0000000000100003: 'HCA(001)')
+0x0005 006 : (Switch portguid 0x0000000000200002: 'Switch(1 1 0)')
+0x0006 004 : (Switch portguid 0x0000000000200003: 'Switch(0 0 0)')
+0x0007 006 : (Switch portguid 0x0000000000200004: 'Switch(0 0 1)')
+0x0008 006 : (Channel Adapter portguid 0x0000000000100005: 'HCA(010)')
+0x0009 001 : (Channel Adapter portguid 0x0000000000100007: 'HCA(011)')
+0x000a 002 : (Channel Adapter portguid 0x0000000000100009: 'HCA(100)')
+0x000b 003 : (Channel Adapter portguid 0x000000000010000b: 'HCA(101)')
+0x000c 007 : (Channel Adapter portguid 0x000000000010000d: 'HCA(110)')
+0x000d 004 : (Channel Adapter portguid 0x000000000010000f: 'HCA(111)')
+0x000e 005 : (Channel Adapter portguid 0x0000000000100011: 'HCA(200)')
+14 valid lids dumped 
+Unicast lids [0x0-0xe] of switch DR path slid 0; dlid 0; 0,1,5 guid 0x0000000000200004 (Switch(0 0 1)):
+  Lid  Out   Destination
+       Port     Info 
+0x0001 001 : (Channel Adapter portguid 0x0000000000100001: 'HCA(000)')
+0x0002 002 : (Switch portguid 0x0000000000200000: 'Switch(1 0 0)')
+0x0003 004 : (Switch portguid 0x0000000000200001: 'Switch(1 0 1)')
+0x0004 002 : (Channel Adapter portguid 0x0000000000100003: 'HCA(001)')
+0x0005 006 : (Switch portguid 0x0000000000200002: 'Switch(1 1 0)')
+0x0006 002 : (Switch portguid 0x0000000000200003: 'Switch(0 0 0)')
+0x0007 000 : (Switch portguid 0x0000000000200004: 'Switch(0 0 1)')
+0x0008 001 : (Channel Adapter portguid 0x0000000000100005: 'HCA(010)')
+0x0009 003 : (Channel Adapter portguid 0x0000000000100007: 'HCA(011)')
+0x000a 004 : (Channel Adapter portguid 0x0000000000100009: 'HCA(100)')
+0x000b 003 : (Channel Adapter portguid 0x000000000010000b: 'HCA(101)')
+0x000c 005 : (Channel Adapter portguid 0x000000000010000d: 'HCA(110)')
+0x000d 006 : (Channel Adapter portguid 0x000000000010000f: 'HCA(111)')
+0x000e 005 : (Channel Adapter portguid 0x0000000000100011: 'HCA(200)')
+14 valid lids dumped 
+Unicast lids [0x0-0xe] of switch DR path slid 0; dlid 0; 0,1,4 guid 0x0000000000200003 (Switch(0 0 0)):
+  Lid  Out   Destination
+       Port     Info 
+0x0001 001 : (Channel Adapter portguid 0x0000000000100001: 'HCA(000)')
+0x0002 002 : (Switch portguid 0x0000000000200000: 'Switch(1 0 0)')
+0x0003 004 : (Switch portguid 0x0000000000200001: 'Switch(1 0 1)')
+0x0004 002 : (Channel Adapter portguid 0x0000000000100003: 'HCA(001)')
+0x0005 006 : (Switch portguid 0x0000000000200002: 'Switch(1 1 0)')
+0x0006 000 : (Switch portguid 0x0000000000200003: 'Switch(0 0 0)')
+0x0007 002 : (Switch portguid 0x0000000000200004: 'Switch(0 0 1)')
+0x0008 001 : (Channel Adapter portguid 0x0000000000100005: 'HCA(010)')
+0x0009 003 : (Channel Adapter portguid 0x0000000000100007: 'HCA(011)')
+0x000a 004 : (Channel Adapter portguid 0x0000000000100009: 'HCA(100)')
+0x000b 003 : (Channel Adapter portguid 0x000000000010000b: 'HCA(101)')
+0x000c 005 : (Channel Adapter portguid 0x000000000010000d: 'HCA(110)')
+0x000d 006 : (Channel Adapter portguid 0x000000000010000f: 'HCA(111)')
+0x000e 005 : (Channel Adapter portguid 0x0000000000100011: 'HCA(200)')
+14 valid lids dumped 
+Unicast lids [0x0-0xe] of switch DR path slid 0; dlid 0; 0,1 guid 0x0000000000200000 (Switch(1 0 0)):
+  Lid  Out   Destination
+       Port     Info 
+0x0001 001 : (Channel Adapter portguid 0x0000000000100001: 'HCA(000)')
+0x0002 000 : (Switch portguid 0x0000000000200000: 'Switch(1 0 0)')
+0x0003 006 : (Switch portguid 0x0000000000200001: 'Switch(1 0 1)')
+0x0004 002 : (Channel Adapter portguid 0x0000000000100003: 'HCA(001)')
+0x0005 006 : (Switch portguid 0x0000000000200002: 'Switch(1 1 0)')
+0x0006 006 : (Switch portguid 0x0000000000200003: 'Switch(0 0 0)')
+0x0007 007 : (Switch portguid 0x0000000000200004: 'Switch(0 0 1)')
+0x0008 003 : (Channel Adapter portguid 0x0000000000100005: 'HCA(010)')
+0x0009 004 : (Channel Adapter portguid 0x0000000000100007: 'HCA(011)')
+0x000a 005 : (Channel Adapter portguid 0x0000000000100009: 'HCA(100)')
+0x000b 006 : (Channel Adapter portguid 0x000000000010000b: 'HCA(101)')
+0x000c 007 : (Channel Adapter portguid 0x000000000010000d: 'HCA(110)')
+0x000d 004 : (Channel Adapter portguid 0x000000000010000f: 'HCA(111)')
+0x000e 005 : (Channel Adapter portguid 0x0000000000100011: 'HCA(200)')
+14 valid lids dumped 
+
+*** WARNING ***: this command has been replaced by dump_fts
+
+
