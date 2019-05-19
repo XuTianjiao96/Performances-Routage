@@ -4,7 +4,7 @@
 #include <cstring>
 #include <sstream>
 #include <cstdlib>
-
+#include <algorithm>
 #include "calculation.h"
 #include "topology.h"
 #include "routing.h"
@@ -33,7 +33,7 @@ Calculation::Calculation(char* topoFile, char* routeFile)
 int Calculation::getHopCount(int fromId, int toId)
 {
 	int count = 0;
-	
+	cout << "fromId=" << fromId << " toId=" << toId << endl;
 	struct hostNode * fromHost = topologyTable.getHostById(fromId);
 	struct hostNode * toHost = topologyTable.getHostById(toId);
 
@@ -46,11 +46,12 @@ int Calculation::getHopCount(int fromId, int toId)
 	
 	//TODO
 	string nextNode = switchName;
-	cout << "nextNode: " << nextNode << endl;
+	//cout << "nextNode: " << nextNode << endl;
 	int outPort = 0;
 	//Parcourir la table de routage du noeud fromId vers le toId
 	//Aide : Regarder la struture routeItem et switchNode elles pourront vous aider.
 	//Aide : struct routeItem * item = routingTable.getTableByName(switchName); permet de charger la table de routage
+	
 	while ( nextNode.compare(toNode) != 0) {  
 
 		struct routeItem * item = routingTable.getTableByName(nextNode);
@@ -120,16 +121,26 @@ int Calculation::getRoute(int fromId, int toId)
 
 	string toNode = topologyTable.getSwitchById(toId)->name;
 	
-	cout << "From " << fromNode << " to " << toNode;
+	cout << "From " << fromNode << " to " << toNode << endl;
 
 	string switchName = fromHost->dstName;
-
-
-	//TODO
+	
+	struct routeItem * item = routingTable.getTableByName(switchName);
+	
 	//Parcourir la table de routage du noeud fromId vers le toId
+	for (int i = 0; i < item->dstInfo.size(); i++) {
+		//cout << "dstinfo[" << i << "] = " << item->dstInfo[i] << endl;
+		if (item->dstInfo[i].compare(toNode) == 0) {
+			return 1;
+		}
+	}
+
+	//Retourner 1 si le noeud toId est atteilgnable depuis fromId sinon 0
+	return 0;
+	
 	//Aide : Regarder la structure routeItem et switchNode elles pourront vous aider.
 	//Aide : struct routeItem * item = routingTable.getTableByName(switchName); permet de charger la table de routage
-	//Retourner 1 si le noeud toId est atteilgnable depuis fromId sinon 0
+	
 	
 }
 
@@ -139,11 +150,36 @@ int Calculation::getRoute(int fromId, int toId)
 int Calculation::balance() 
 {
 	int cpt = 0 ; 
-	
-	//TODO 
+	int nbRoutes = 0;
 	//Implémenter l'algo du calcul de chemins disjoints 
+	//TODO 
+	//for ( int node = 0; node < topologyTable.getHostCount(); node++) {
+	for ( int i = 0; i < topologyTable.getSwitchCount(); i++) {
+		struct switchNode * node = topologyTable.getSwitchById(i);
+		struct routeItem * item = routingTable.getTableByName(node->name);
+		cout << "outportSize=" << item->outport.size() << endl;
+		cout << "portcount=" << node->portCount << endl;
+		for ( int j = 0; j < node->portCount; j++) {
+			int port = node->srcPort[j];
+			nbRoutes = 0;
+			cout << "port=" << port << endl;
+			//nbRoutes = count(item->outport.begin(), item->outport.end(), port);
+			for ( int k = 0; k < item->outport.size(); k++) {
+				if ( port == item->outport[k]) {
+					nbRoutes++;
+				}
+			}
+			cout << "nbRoutes=" << nbRoutes << endl;
+			if (nbRoutes > cpt) {
+				cpt = nbRoutes;
+			}
+		}
+	}	
+	
 	//Aide : Pour recueperer le nombre de sauts de source vers destination -> getHopCount(source, destination);
 	//Aide : Pour recuperer le nombre de HCA -> topologyTable.getHostCount();
+
+
 	//retourner la valeur maximale trouvée
 
 	return cpt ;
