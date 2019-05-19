@@ -15,16 +15,41 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="calculation.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="routing.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="topology.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
     <ClInclude Include="pch.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="calculation.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="routing.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="topology.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="Performances-Routage.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+    <None Include="fichier\Topo1.route" />
+    <None Include="fichier\Topo1.topo" />
+    <None Include="fichier\Topo2.route" />
+    <None Include="fichier\Topo2.topo" />
   </ItemGroup>
 </Project>

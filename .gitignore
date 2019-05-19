@@ -1,0 +1,5 @@
+
+*.vcxproj
+Performances-Routage.vcxproj.user
+Performances-Routage.vcxproj.filters
+Debug/
