@@ -152,16 +152,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="calculation.h" />
-    <ClInclude Include="pch.h" />
     <ClInclude Include="routing.h" />
     <ClInclude Include="topology.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="calculation.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="pch.cpp" />
-    <ClCompile Include="routing.cpp" />
-    <ClCompile Include="topology.cpp" />
+    <ClCompile Include="calculation.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="routing.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="topology.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="fichier\Topo1.route" />

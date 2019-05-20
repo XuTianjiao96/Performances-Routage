@@ -49,6 +49,24 @@ int Calculation::getHopCount(int fromId, int toId)
 	//Aide : Regarder la struture routeItem et switchNode elles pourront vous aider.
 	//Aide : struct routeItem * item = routingTable.getTableByName(switchName); permet de charger la table de routage
 	//Retourner le nombre de sauts du noeud fromId vers le toId	
+
+/*
+	while (switchName != toNode) {
+		routeItem * item = routingTable.getTableByName(switchName);
+		int i;
+		for (i = 0; i < item->dstInfo.size(); i++)
+		{
+			if (item->dstInfo[i] == toNode)
+				break;
+		}
+		cout << switchName << endl;
+		cout << i << endl;
+		cout << item->outport[i] << endl;
+		switchName = topologyTable.getSwitchByName(switchName)->dstName[item->outport[i] - 1];
+		cout << switchName << endl;
+		count++;
+	}
+*/
 	cout << "From " << fromNode << " to " << toNode << ": Hop Count = " << count << endl;
 	return count;
 }
@@ -59,6 +77,8 @@ int Calculation::getHopCount(int fromId, int toId)
 int Calculation::calculate() 
 {
 	int minHop = 0; //Min value
+
+	getHopCount(1, 8);
 
 	//TODO 
 	//Implémenter l'algo du calcul du nombre de sauts
@@ -90,8 +110,9 @@ int Calculation::getRoute(int fromId, int toId)
 	//Parcourir la table de routage du noeud fromId vers le toId
 	//Aide : Regarder la structure routeItem et switchNode elles pourront vous aider.
 	//Aide : struct routeItem * item = routingTable.getTableByName(switchName); permet de charger la table de routage
-	//Retourner 1 si le noeud toId est atteilgnable depuis fromId sinon 0
+	//Retourner 1 si le noeud toId est attainable depuis fromId sinon 0
 	
+	return 1;
 }
 
 /**
